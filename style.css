@@ -1,0 +1,171 @@
+body {
+  background-color: #d4fb84;
+  margin: 0;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body>* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 650px;
+}
+
+.input-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-text {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.add-btn {
+  flex: 1;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.list>li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 15px 0;
+  color: black;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  margin-left: 30px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f1cb40;
+  transform: translateY(-50%);
+}
+
+.label::after {
+  position: absolute;
+  content: '✔';
+  display: none;
+  top: 50%;
+  left: -28px;
+  border-radius: 50%;
+  transform: translateY(-59%);
+}
+
+.item-text {
+  word-wrap: break-word;
+  width: 50%;
+}
+
+.label:hover {
+  cursor: pointer;
+}
+
+.check {
+  display: none;
+}
+
+.check:checked+.label::after {
+  display: block;
+}
+
+.button-block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.button-block>* {
+  flex: 1;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #f1cb40;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.check-all-btn {
+  margin-bottom: 20px;
+}
+
+.remove-btn {
+  font-size: 15px;
+  border: none;
+  background: transparent;
+  transition: 0.3s all ease;
+}
+
+.remove-btn:hover,
+.remove-btn:focus {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+
+.remove-btn:active,
+.remove-btn:focus {
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #f19e1a;
+  outline: none;
+}
+
+.input-text {
+  background: transparent;
+  padding: 10px 20px;
+  border: none;
+  font-size: 20px;
+  border-bottom: 2px solid #f19e1a;
+  color: black;
+  outline: none;
+}
+
+.input-text:hover,
+.input-text:focus,
+.input-text:active {
+  outline: none;
+}
+
+.input-text:focus {
+  border-bottom-color: #c9d60e;
+}
+
+.input-text::placeholder {
+  color: #000000;
+}
